@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace Stocklist.iOS
+namespace Stocklist.Portable.iOS
 {
 	public class Application
 	{

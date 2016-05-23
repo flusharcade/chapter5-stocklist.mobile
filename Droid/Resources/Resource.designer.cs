@@ -1,4 +1,4 @@
-﻿namespace Stocklist.Droid
+﻿namespace Stocklist.Portable.Droid
 {
 
 

@@ -1,1 +1,16 @@
-﻿<Properties StartupItem="iOS/Stocklist.iOS.csproj" />
+﻿<Properties StartupItem="iOS/Stocklist.iOS.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Pages/MainPage.xaml">
+    <Files>
+      <File FileName="Stocklist.Portable/IoC/IModule.cs" Line="1" Column="1" />
+      <File FileName="Pages/MainPage.xaml.cs" Line="14" Column="24" />
+      <File FileName="UI/INavigableXamarinFormsPage.cs" Line="7" Column="21" />
+      <File FileName="Pages/MainPage.xaml" Line="7" Column="23" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Stocklist.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.4D94D0EF-12F5-45B6-83B6-58F50C2938C0" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

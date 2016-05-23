@@ -2,7 +2,7 @@
 
 using Xamarin.Forms;
 
-namespace Stocklist
+namespace Stocklist.Portable
 {
 	public class App : Application
 	{
@@ -11,7 +11,7 @@ namespace Stocklist
 			// The root page of your application
 			var content = new ContentPage
 			{
-				Title = "Stocklist",
+				Title = "Stocklist.Portable",
 				Content = new StackLayout
 				{
 					VerticalOptions = LayoutOptions.Center,
