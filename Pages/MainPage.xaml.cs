@@ -4,36 +4,64 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Locator.Pages
+namespace Stocklist.XamForms.Pages
 {
 	using System;
 	using System.Collections.Generic;
+	using System.Windows.Input;
 
 	using Xamarin.Forms;
+	using Xamarin.Forms.Xaml;
 
-	using Locator.Portable.ViewModels;
-	using Locator.Portable.Ioc;
-	using Locator.UI;
+	using Stocklist.XamForms.UI;
 
-	public partial class MainPage : ContentPage, INavigableXamarinFormsPage 
+	using Stocklist.Portable.ViewModels;
+	using Stocklist.Portable.Ioc;
+
+	public partial class MainPage : ContentPage, INavigableXamarinFormsPage
 	{
-		private MainPageViewModel viewModel;
+		private bool originalTemplate = true;
 
-		public MainPage ()
+		private ControlTemplate blackTemplate;
+
+		private ControlTemplate whiteTemplate;
+
+		public static readonly BindableProperty StocklistCommandProperty = BindableProperty.Create("StocklistCommand", typeof(ICommand), typeof(MainPage), null);
+		public static readonly BindableProperty ExitCommandProperty = BindableProperty.Create("ExitCommand", typeof(ICommand), typeof(MainPage), null);
+
+		public ICommand StocklistCommand
 		{
-			this.InitializeComponent ();
+			get { return (ICommand)GetValue(StocklistCommandProperty); }
 		}
 
-		public MainPage (MainPageViewModel model)
+		public ICommand ExitCommand
+		{
+			get { return (ICommand)GetValue(ExitCommandProperty); }
+		}
+
+		public MainPage()
+		{
+			this.InitializeComponent();
+
+			blackTemplate = (ControlTemplate)Application.Current.Resources["MainBlackTemplate"];
+			whiteTemplate = (ControlTemplate)Application.Current.Resources["MainWhiteTemplate"];
+		}
+
+		public MainPage(MainPageViewModel model) : this()
 		{
 			this.BindingContext = model;
-			this.InitializeComponent ();
 		}
 
 		public void OnNavigatedTo(IDictionary<string, object> navigationParameters)
 		{
-			this.Show (navigationParameters);
+			this.Show(navigationParameters);
+		}
+
+		public void ChangeThemeClicked(object sender, EventArgs e)
+		{
+			originalTemplate = !originalTemplate;
+			this.ControlTemplate = originalTemplate ? blackTemplate : whiteTemplate;
+			this.BackgroundColor = originalTemplate ? Color.Black : Color.White;
 		}
 	}
 }
-

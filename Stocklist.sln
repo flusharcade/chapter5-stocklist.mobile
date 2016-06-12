@@ -1,13 +1,15 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stocklist", "Stocklist.csproj", "{83994D64-A561-464F-8DB0-0108F7FA8759}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stocklist.XamForms", "Stocklist.XamForms.csproj", "{83994D64-A561-464F-8DB0-0108F7FA8759}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stocklist.iOS", "iOS\Stocklist.iOS.csproj", "{65406A8F-CFAE-4AF1-B6B0-ECC9780AC069}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stocklist.Droid", "Droid\Stocklist.Droid.csproj", "{4C0618AB-2C8F-4612-B619-D21596564641}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stocklist.Portable", "Stocklist.Portable\Stocklist.Portable.csproj", "{2379A4D7-D404-4174-9A46-C1A96F484579}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Stocklist.Shared", "Stocklist.Shared\Stocklist.Shared.shproj", "{DA0A8DDB-2337-4872-8FD2-1171C912497F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

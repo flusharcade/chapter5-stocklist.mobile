@@ -3,27 +3,33 @@
 //   Copyright (c) 2015 Flush Arcade All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
-using System.Collections.Generic;
 
-namespace Locator.UI
+namespace Stocklist.XamForms.UI
 {
 	using System;
+	using System.Collections.Generic;
+	using System.Threading.Tasks;
 
 	using Xamarin.Forms;
 
-	using Locator.Pages;
+	using Stocklist.XamForms.Pages;
 
-	using Locator.Portable.UI;
-	using Locator.Portable.Enums;
-	using Locator.Portable.Ioc;
+	using Stocklist.Portable.UI;
+	using Stocklist.Portable.Enums;
+	using Stocklist.Portable.Ioc;
 
 	public class NavigationService : INavigationService
 	{
 		#region INavigationService implementation
 
-		public async void Navigate (PageNames pageName, IDictionary<string, object> navigationParameters)
+		/// <summary>
+		/// Navigate the specified pageName and navigationParameters.
+		/// </summary>
+		/// <param name="pageName">Page name.</param>
+		/// <param name="navigationParameters">Navigation parameters.</param>
+		public async Task Navigate (PageNames pageName, IDictionary<string, object> navigationParameters)
 		{
-			var page = this.getPage (pageName);
+			var page = this.GetPage (pageName);
 
 			if (page != null) 
 			{
@@ -32,25 +38,31 @@ namespace Locator.UI
 				if (navigablePage != null) 
 				{
 					await IoC.Resolve<NavigationPage> ().PushAsync (page);
-					navigablePage.OnNavigatedTo ();
+					navigablePage.OnNavigatedTo (navigationParameters);
 				}
 			}
 		}
 
 		#endregion
 
-		private Page getPage(PageNames page)
+		/// <summary>
+		/// Gets the page.
+		/// </summary>
+		/// <returns>The page.</returns>
+		/// <param name="page">Page.</param>
+		private Page GetPage(PageNames page)
 		{
 			switch(page)
 			{
 				case PageNames.MainPage:
 					return IoC.Resolve<MainPage> ();
-				case PageNames.MapPage:
-					return IoC.Resolve<MapPage> ();
+				case PageNames.StocklistPage:
+					return IoC.Resolve<Func<StocklistPage>>()();
+				case PageNames.StockItemDetailsPage:
+					return IoC.Resolve<Func<StockItemDetailsPage>>()();
 				default:
 					return null;
 			}
 		}
 	}
 }
-

@@ -1,16 +1,41 @@
 ﻿<Properties StartupItem="iOS/Stocklist.iOS.csproj">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Pages/MainPage.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UI/NavigationService.cs">
     <Files>
-      <File FileName="Stocklist.Portable/IoC/IModule.cs" Line="1" Column="1" />
-      <File FileName="Pages/MainPage.xaml.cs" Line="14" Column="24" />
-      <File FileName="UI/INavigableXamarinFormsPage.cs" Line="7" Column="21" />
-      <File FileName="Pages/MainPage.xaml" Line="7" Column="23" />
+      <File FileName="Controls/CustomLabel.cs" Line="19" Column="5" />
+      <File FileName="Pages/StockItemDetailsPage.xaml" Line="30" Column="1" />
+      <File FileName="Droid/Renderers/CustomLabelRenderer.cs" Line="49" Column="3" />
+      <File FileName="App.xaml" Line="46" Column="28" />
+      <File FileName="App.xaml.cs" Line="21" Column="3" />
+      <File FileName="Pages/StockItemDetailsPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="Stocklist.Portable/ViewModels/StockItemDetailsPageViewModel.cs" Line="1" Column="1" />
+      <File FileName="Stocklist.Portable/ViewModels/StocklistPageViewModel.cs" Line="89" Column="35" />
+      <File FileName="Stocklist.Portable/ViewModels/StockItemViewModel.cs" Line="1" Column="1" />
+      <File FileName="Stocklist.Portable/ViewModels/MainPageViewModel.cs" Line="1" Column="1" />
+      <File FileName="Pages/StocklistPage.xaml" Line="26" Column="10" />
+      <File FileName="Converters/NotConverter.cs" Line="1" Column="1" />
+      <File FileName="Stocklist.Portable/Modules/PortableModule.cs" Line="32" Column="53" />
+      <File FileName="Stocklist.Portable/Enums/PageNames.cs" Line="18" Column="3" />
+      <File FileName="UI/XamarinNavigationExtensions.cs" Line="1" Column="1" />
+      <File FileName="UI/NavigationService.cs" Line="29" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Stocklist.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.4D94D0EF-12F5-45B6-83B6-58F50C2938C0" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/mww121/Desktop/FlushArcade/PACKT Publishing/Xamarin Blueprints/Chapters/Chapter 5/Stocklist/Pages/MainPage.xaml.cs" line="63" column="1" />
+      <Breakpoint file="/Users/mww121/Desktop/FlushArcade/PACKT Publishing/Xamarin Blueprints/Chapters/Chapter 5/Stocklist/App.xaml" line="84" column="1" />
+      <Breakpoint file="/Users/mww121/Desktop/FlushArcade/PACKT Publishing/Xamarin Blueprints/Chapters/Chapter 5/Stocklist/App.xaml" line="38" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../../../../../Development/Telstra/HealthConnex/MyCareManager/MyCareManager.Portable/Repositories/AccountRepository/AccountRepository.cs" line="214" offsetX="986" offsetY="3195" expression="this.webServiceUrl.AbsoluteUri" liveUpdate="False" />
+    <Watch file="../../../../../../Development/Telstra/HealthConnex/MyCareManager/MyCareManager.Portable/Repositories/TargetRangeRepository/TargetRangeRepository.cs" line="107" offsetX="950" offsetY="1590" expression="message.RequestUri" liveUpdate="False" />
+    <Watch file="../../../../../../Development/Telstra/HealthConnex/MyCareManager/MyCareManager.Droid/Bluetooth/BluetoothSocketHandler.cs" line="260" offsetX="322" offsetY="3885" expression="error" liveUpdate="False" />
+    <Watch file="../../../../../../Development/Telstra/HealthConnex/MyCareManager/MyCareManager.Portable/Repositories/ReminderRepository/ReminderRepository.cs" line="131" offsetX="603" offsetY="1950" expression="t" liveUpdate="False" />
+    <Watch file="../../../../../../Development/Telstra/HealthConnex/MyCareManager/MyCareManager.Portable/Repositories/ReminderRepository/ReminderRepository.cs" line="115" offsetX="972" offsetY="1710" expression="message.RequestUri" liveUpdate="False" />
+    <Watch file="../../../../../../Development/Telstra/HealthConnex/MyCareManager/MyCareManager.Portable/Repositories/SettingsRepository/SettingsRepository.cs" line="98" offsetX="676" offsetY="1455" expression="settingsUri" liveUpdate="False" />
+    <Watch file="../../../../../../Development/Telstra/HealthConnex/MyCareManager/MyCareManager.Portable/ViewModels/Controls/GraphViewModel.cs" line="665" offsetX="669" offsetY="9964" expression="this.observationHandler.ObservationMap" liveUpdate="False" />
+    <Watch file="../../../../../../Development/Telstra/HealthConnex/MyCareManager/RavenClient.Shared/RavenClient.cs" line="275" offsetX="553" offsetY="4110" expression="packet" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
 </Properties>

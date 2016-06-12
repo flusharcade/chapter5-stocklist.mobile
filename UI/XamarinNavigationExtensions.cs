@@ -4,19 +4,19 @@
 //  </copyright>
 // --------------------------------------------------------------------------------------------------
 
-namespace Locator.UI
+namespace Stocklist.XamForms.UI
 {
 	using System;
 	using System.Collections.Generic;
 
 	using Xamarin.Forms;
 
-	using Locator.Pages;
+	using Stocklist.XamForms.Pages;
 
-	using Locator.Portable.UI;
-	using Locator.Portable.Enums;
-	using Locator.Portable.Ioc;
-	using Locator.Portable.ViewModels;
+	using Stocklist.Portable.UI;
+	using Stocklist.Portable.Enums;
+	using Stocklist.Portable.Ioc;
+	using Stocklist.Portable.ViewModels;
 
 	public static class XamarinNavigationExtensions
 	{

@@ -16,96 +16,52 @@ namespace Stocklist.Portable.ViewModels
 	public class MainPageViewModel : ViewModelBase
 	{
 		#region Private Properties
-	
-		private readonly IMethods methods;
 
-		private string descriptionMessage = "Find your location";
+		private bool _inProgress;
 
-		private string locationTitle = "Find Location";
+		private ICommand _stocklistCommand;
 
-		private string exitTitle = "Exit";
-
-		private ICommand locationCommand;
-
-		private ICommand exitCommand;
+		private ICommand _exitCommand;
 
 		#endregion
 
 		#region Public Properties
 
-		public string DescriptionMessage
+		public bool InProgress
 		{
 			get
 			{
-				return this.descriptionMessage;
+				return _inProgress;
 			}
 
 			set
 			{
-				if (value.Equals(this.descriptionMessage))
+				if (value.Equals(_inProgress))
 				{
 					return;
 				}
 
-				this.descriptionMessage = value;
-				this.OnPropertyChanged("DescriptionMessage");
+				_inProgress = value;
+				OnPropertyChanged("InProgress");
 			}
 		}
 
-		public string LocationTitle
+		public ICommand StocklistCommand
 		{
 			get
 			{
-				return this.locationTitle;
+				return _stocklistCommand;
 			}
 
 			set
 			{
-				if (value.Equals(this.locationTitle))
+				if (value.Equals(_stocklistCommand))
 				{
 					return;
 				}
 
-				this.locationTitle = value;
-				this.OnPropertyChanged("LocationTitle");
-			}
-		}
-
-		public string ExitTitle
-		{
-			get
-			{
-				return this.exitTitle;
-			}
-
-			set
-			{
-				if (value.Equals(this.exitTitle))
-				{
-					return;
-				}
-
-				this.exitTitle = value;
-				this.OnPropertyChanged("ExitTitle");
-			}
-		}
-
-		public ICommand LocationCommand
-		{
-			get
-			{
-				return this.locationCommand;
-			}
-
-			set
-			{
-				if (value.Equals(this.locationCommand))
-				{
-					return;
-				}
-
-				this.locationCommand = value;
-				this.OnPropertyChanged("LocationCommand");
+				_stocklistCommand = value;
+				OnPropertyChanged("StocklistCommand");
 			}
 		}
 
@@ -113,18 +69,18 @@ namespace Stocklist.Portable.ViewModels
 		{
 			get
 			{
-				return this.exitCommand;
+				return _exitCommand;
 			}
 
 			set
 			{
-				if (value.Equals(this.exitCommand))
+				if (value.Equals(_exitCommand))
 				{
 					return;
 				}
 
-				this.exitCommand = value;
-				this.OnPropertyChanged("ExitCommand");
+				_exitCommand = value;
+				OnPropertyChanged("ExitCommand");
 			}
 		}
 
@@ -135,8 +91,15 @@ namespace Stocklist.Portable.ViewModels
 		public MainPageViewModel (INavigationService navigation, Func<Action, ICommand> commandFactory,
 			IMethods methods) : base (navigation)
 		{
-			this.exitCommand = commandFactory (() => methods.Exit());
-			this.locationCommand = commandFactory (() => this.Navigation.Navigate(PageNames.MapPage, null));
+			_exitCommand = commandFactory (() =>
+			{
+				methods.Exit();
+			});
+
+			_stocklistCommand = commandFactory (() =>
+			{
+				Navigation.Navigate(PageNames.StocklistPage, null);
+			});
 		}
 
 		#endregion

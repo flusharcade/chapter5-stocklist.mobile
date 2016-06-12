@@ -4,7 +4,7 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Locator.UI
+namespace Stocklist.XamForms.UI
 {
 	using System.Collections.Generic;
 

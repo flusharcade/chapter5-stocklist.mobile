@@ -12,7 +12,9 @@ namespace Stocklist.Portable.Enums
 	{
 		MainPage,
 
-		MapPage
+		StocklistPage,
+
+		StockItemDetailsPage
 	}
 }
 

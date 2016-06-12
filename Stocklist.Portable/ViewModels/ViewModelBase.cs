@@ -3,14 +3,14 @@
 //   Copyright (c) 2015 Flush Arcade All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using System.Reactive.Threading.Tasks;
 
 namespace Stocklist.Portable.ViewModels
 {
 	using System;
 	using System.ComponentModel;
+	using System.Collections.Generic;
+	using System.Threading.Tasks;
+	using System.Reactive.Threading.Tasks;
 	using System.Runtime.CompilerServices;
 
 	using Stocklist.Portable.UI;

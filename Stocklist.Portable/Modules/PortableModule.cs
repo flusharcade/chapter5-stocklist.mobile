@@ -13,20 +13,27 @@ namespace Stocklist.Portable.Modules
 	using Stocklist.Portable.Ioc;
 	using Stocklist.Portable.ViewModels;
 	using Stocklist.Portable.UI;
-	using Stocklist.Portable.Location;
 
-	using Stocklist.Portable.Repositories.GeocodingRepository;
+	using Stocklist.Portable.Repositories.StocklistRepository;
 
+	/// <summary>
+	/// Portable module.
+	/// </summary>
 	public class PortableModule : IModule
 	{
+		/// <summary>
+		/// Register the specified builer.
+		/// </summary>
+		/// <param name="builer">Builer.</param>
 		public void Register(ContainerBuilder builer)
 		{
 			builer.RegisterType<MainPageViewModel> ().SingleInstance();
-			builer.RegisterType<MapPageViewModel> ().SingleInstance();
+			builer.RegisterType<StocklistPageViewModel> ().SingleInstance();
+			builer.RegisterType<StockItemDetailsPageViewModel>().InstancePerDependency();
 
-			builer.RegisterType<Position> ().As<IPosition>().SingleInstance();
+			builer.RegisterType<StockItemViewModel>().InstancePerDependency();
 
-			builer.RegisterType<GeocodingRepository> ().As<IGeocodingRepository>().SingleInstance();
+			builer.RegisterType<StocklistRepository> ().As<IStocklistRepository>().SingleInstance();
 		}
 	}
 }

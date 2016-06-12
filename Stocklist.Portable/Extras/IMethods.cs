@@ -4,7 +4,7 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Locator.Portable.Extras
+namespace Stocklist.Portable.Extras
 {
 	/// <summary>
 	/// The methods interface
@@ -14,4 +14,3 @@ namespace Locator.Portable.Extras
 		void Exit();
 	}
 }
-

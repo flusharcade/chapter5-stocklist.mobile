@@ -1,10 +1,10 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="PCLModule.cs" company="Flush Arcade">
+// <copyright file="XamFormsModule.cs" company="Flush Arcade">
 //   Copyright (c) 2015 Flush Arcade All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Locator.Modules
+namespace Stocklist.XamForms.Modules
 {
 	using System;
 	using System.Windows.Input;
@@ -13,10 +13,10 @@ namespace Locator.Modules
 
 	using Xamarin.Forms;
 
-	using Stocklist.Portable.Ioc;
-	using Locator.Pages;
-	using Locator.UI;
+	using Stocklist.XamForms.Pages;
+	using Stocklist.XamForms.UI;
 
+	using Stocklist.Portable.Ioc;
 	using Stocklist.Portable.UI;
 
 	public class XamFormsModule : IModule
@@ -24,9 +24,10 @@ namespace Locator.Modules
 		public void Register(ContainerBuilder builer)
 		{
 			builer.RegisterType<MainPage> ().SingleInstance();
-			builer.RegisterType<MapPage> ().SingleInstance();
+			builer.RegisterType<StocklistPage> ().SingleInstance();
+			builer.RegisterType<StockItemDetailsPage>().InstancePerDependency();
 
-			builer.RegisterType<Xamarin.Forms.Command> ().As<ICommand>().SingleInstance();
+			builer.RegisterType<Xamarin.Forms.Command> ().As<ICommand>().InstancePerDependency();
 
 			builer.Register (x => new NavigationPage(x.Resolve<MainPage>())).AsSelf().SingleInstance();
 
