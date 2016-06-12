@@ -15,6 +15,9 @@ namespace Stocklist.iOS.Extras
 	/// </summary>
 	public class IOSMethods : IMethods
 	{
+		/// <summary>
+		/// Exit this instance.
+		/// </summary>
 		public void Exit()
 		{
 			UIApplication.SharedApplication.PerformSelector(new ObjCRuntime.Selector("terminateWithSuccess"), null, 0f);

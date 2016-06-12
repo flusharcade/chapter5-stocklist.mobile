@@ -13,20 +13,36 @@ namespace Stocklist.Portable.ViewModels
 	using Stocklist.Portable.UI;
 	using Stocklist.Portable.Extras;
 
+	/// <summary>
+	/// Main page view model.
+	/// </summary>
 	public class MainPageViewModel : ViewModelBase
 	{
 		#region Private Properties
 
+		/// <summary>
+		/// The in progress.
+		/// </summary>
 		private bool _inProgress;
 
+		/// <summary>
+		/// The stocklist command.
+		/// </summary>
 		private ICommand _stocklistCommand;
 
+		/// <summary>
+		/// The exit command.
+		/// </summary>
 		private ICommand _exitCommand;
 
 		#endregion
 
 		#region Public Properties
 
+		/// <summary>
+		/// Gets or sets the in progress.
+		/// </summary>
+		/// <value>The in progress.</value>
 		public bool InProgress
 		{
 			get
@@ -46,6 +62,10 @@ namespace Stocklist.Portable.ViewModels
 			}
 		}
 
+		/// <summary>
+		/// Gets or sets the stocklist command.
+		/// </summary>
+		/// <value>The stocklist command.</value>
 		public ICommand StocklistCommand
 		{
 			get
@@ -65,6 +85,10 @@ namespace Stocklist.Portable.ViewModels
 			}
 		}
 
+		/// <summary>
+		/// Gets or sets the exit command.
+		/// </summary>
+		/// <value>The exit command.</value>
 		public ICommand ExitCommand
 		{
 			get
@@ -88,6 +112,12 @@ namespace Stocklist.Portable.ViewModels
 
 		#region Constructors
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="T:Stocklist.Portable.ViewModels.MainPageViewModel"/> class.
+		/// </summary>
+		/// <param name="navigation">Navigation.</param>
+		/// <param name="commandFactory">Command factory.</param>
+		/// <param name="methods">Methods.</param>
 		public MainPageViewModel (INavigationService navigation, Func<Action, ICommand> commandFactory,
 			IMethods methods) : base (navigation)
 		{
@@ -96,9 +126,9 @@ namespace Stocklist.Portable.ViewModels
 				methods.Exit();
 			});
 
-			_stocklistCommand = commandFactory (() =>
+			_stocklistCommand = commandFactory (async () =>
 			{
-				Navigation.Navigate(PageNames.StocklistPage, null);
+				await Navigation.Navigate(PageNames.StocklistPage, null);
 			});
 		}
 

@@ -12,16 +12,31 @@ namespace Stocklist.Portable.ViewModels
 
 	using Stocklist.Portable.Repositories.GeocodingRepository.Contracts;
 
+	/// <summary>
+	/// Stock item view model.
+	/// </summary>
 	public class StockItemViewModel : ViewModelBase
 	{
 		#region Private Properties
 
+		/// <summary>
+		/// The identifier.
+		/// </summary>
 		private int _id;
 
+		/// <summary>
+		/// The name.
+		/// </summary>
 		private string _name;
 
+		/// <summary>
+		/// The category.
+		/// </summary>
 		private string _category;
 
+		/// <summary>
+		/// The price.
+		/// </summary>
 		private decimal _price;
 
 		#endregion
@@ -124,6 +139,10 @@ namespace Stocklist.Portable.ViewModels
 
 		#region Public Methods
 
+		/// <summary>
+		/// Apply the specified contract.
+		/// </summary>
+		/// <param name="contract">Contract.</param>
 		public void Apply(StockItemContract contract)
 		{
 			Id = contract.Id;
@@ -136,6 +155,10 @@ namespace Stocklist.Portable.ViewModels
 
 		#region Constructors
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="T:Stocklist.Portable.ViewModels.StockItemViewModel"/> class.
+		/// </summary>
+		/// <param name="navigation">Navigation.</param>
 		public StockItemViewModel (INavigationService navigation) : base (navigation)
 		{
 		}

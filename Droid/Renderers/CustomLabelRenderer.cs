@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="GradientViewRenderer.cs" company="Health Connex">
-//   Copyright (c) 2015 Health Connex All rights reserved.
+// <copyright file="GradientViewRenderer.cs" company="Flush Arcade">
+//   Copyright (c) 2015 Flush Arcade All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -22,6 +22,11 @@ namespace Stocklist.Droid.Renderers.CustomLabel
 	/// </summary>
 	public class CustomLabelRenderer : LabelRenderer
 	{
+		/// <summary>
+		/// Called when element changes
+		/// </summary>
+		/// <returns>The element changed.</returns>
+		/// <param name="e">E.</param>
 		protected override void OnElementChanged (ElementChangedEventArgs<Label> e) 
 		{
 			base.OnElementChanged (e);

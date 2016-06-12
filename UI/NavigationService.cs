@@ -18,6 +18,9 @@ namespace Stocklist.XamForms.UI
 	using Stocklist.Portable.Enums;
 	using Stocklist.Portable.Ioc;
 
+	/// <summary>
+	/// Navigation service.
+	/// </summary>
 	public class NavigationService : INavigationService
 	{
 		#region INavigationService implementation

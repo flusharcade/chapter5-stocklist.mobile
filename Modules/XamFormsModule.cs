@@ -19,8 +19,15 @@ namespace Stocklist.XamForms.Modules
 	using Stocklist.Portable.Ioc;
 	using Stocklist.Portable.UI;
 
+	/// <summary>
+	/// Xam forms module.
+	/// </summary>
 	public class XamFormsModule : IModule
 	{
+		/// <summary>
+		/// Register the specified builer.
+		/// </summary>
+		/// <param name="builer">Builer.</param>
 		public void Register(ContainerBuilder builer)
 		{
 			builer.RegisterType<MainPage> ().SingleInstance();

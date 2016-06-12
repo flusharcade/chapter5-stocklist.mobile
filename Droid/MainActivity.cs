@@ -6,44 +6,52 @@
 
 namespace Stocklist.Droid
 {
-	using System;
-
 	using Android.App;
-	using Android.Content;
 	using Android.Content.PM;
-	using Android.Runtime;
-	using Android.Views;
-	using Android.Widget;
 	using Android.OS;
 
 	using Stocklist.Droid.Modules;
+
+	using Stocklist.Shared.Modules;
+
 	using Stocklist.XamForms.Modules;
 
 	using Stocklist.Portable.Modules;
 	using Stocklist.Portable.Ioc;
 
+	/// <summary>
+	/// Main activity.
+	/// </summary>
 	[Activity(Label = "Stocklist.Portable.Droid", Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
 	{
+		/// <summary>
+		/// OnCreate override for MainActivity
+		/// </summary>
+		/// <returns>The create.</returns>
+		/// <param name="bundle">Bundle.</param>
 		protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate(bundle);
 
-			initIoC();
+			InitIoC();
 
 			global::Xamarin.Forms.Forms.Init(this, bundle);
 
-			LoadApplication(new App());
+			LoadApplication(new XamForms.App());
 		}
 
-		private void initIoC()
+		/// <summary>
+		/// Initialise the IoC container
+		/// </summary>
+		private void InitIoC()
 		{
 			IoC.CreateContainer();
 			IoC.RegisterModule(new DroidModule());
+			IoC.RegisterModule(new SharedModule(false));
 			IoC.RegisterModule(new XamFormsModule());
 			IoC.RegisterModule(new PortableModule());
 			IoC.StartContainer();
 		}
 	}
 }
-

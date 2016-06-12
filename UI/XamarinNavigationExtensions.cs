@@ -18,11 +18,18 @@ namespace Stocklist.XamForms.UI
 	using Stocklist.Portable.Ioc;
 	using Stocklist.Portable.ViewModels;
 
+	/// <summary>
+	/// Xamarin navigation extensions.
+	/// </summary>
 	public static class XamarinNavigationExtensions
 	{
 		#region Public Methods and Operators
 
-		// for ContentPage
+		/// <summary>
+		/// Show the specified page and parameters.
+		/// </summary>
+		/// <param name="page">Page.</param>
+		/// <param name="parameters">Parameters.</param>
 		public static void Show(this ContentPage page, IDictionary<string, object> parameters)
 		{
 			var target = page.BindingContext as ViewModelBase;

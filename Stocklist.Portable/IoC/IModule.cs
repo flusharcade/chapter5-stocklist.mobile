@@ -8,8 +8,15 @@ namespace Stocklist.Portable.Ioc
 {
 	using Autofac;
 
+	/// <summary>
+	/// Module.
+	/// </summary>
 	public interface IModule
 	{
+		/// <summary>
+		/// Register the specified builer.
+		/// </summary>
+		/// <param name="builer">Builer.</param>
 		void Register(ContainerBuilder builer);
 	}
 }

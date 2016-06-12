@@ -4,13 +4,19 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
+
 namespace Stocklist.Droid.Extras
 {
+	using Stocklist.Portable.Extras;
+
 	/// <summary>
 	/// The methods interface
 	/// </summary>
-	public class DroidMethods
+	public class DroidMethods : IMethods
 	{
+		/// <summary>
+		/// Exit this instance.
+		/// </summary>
 		public void Exit()
 		{
 			Android.OS.Process.KillProcess(Android.OS.Process.MyPid());

@@ -29,18 +29,39 @@ namespace Stocklist.Portable.ViewModels
 
 		#region Private Properties
 
+		/// <summary>
+		/// The stocklist repository.
+		/// </summary>
 		private readonly IStocklistRepository _stocklistRepository;
 
+		/// <summary>
+		/// The identifier.
+		/// </summary>
 		private int _id;
 
+		/// <summary>
+		/// The name.
+		/// </summary>
 		private string _name;
 
+		/// <summary>
+		/// The category.
+		/// </summary>
 		private string _category;
 
+		/// <summary>
+		/// The price.
+		/// </summary>
 		private decimal _price;
 
+		/// <summary>
+		/// The in progress.
+		/// </summary>
 		private bool _inProgress;
 
+		/// <summary>
+		/// The delete command.
+		/// </summary>
 		private ICommand _deleteCommand;
 
 		#endregion
@@ -139,6 +160,10 @@ namespace Stocklist.Portable.ViewModels
 			}
 		}
 
+		/// <summary>
+		/// Gets or sets the in progress.
+		/// </summary>
+		/// <value>The in progress.</value>
 		public bool InProgress
 		{
 			get
@@ -158,6 +183,10 @@ namespace Stocklist.Portable.ViewModels
 			}
 		}
 
+		/// <summary>
+		/// Gets or sets the pricete command.
+		/// </summary>
+		/// <value>The pricete command.</value>
 		public ICommand _priceteCommand
 		{
 			get
@@ -181,6 +210,11 @@ namespace Stocklist.Portable.ViewModels
 
 		#region Methods
 
+		/// <summary>
+		/// Loads the view-model.
+		/// </summary>
+		/// <returns>The async.</returns>
+		/// <param name="parameters">Parameters.</param>
 		protected override async Task LoadAsync(IDictionary<string, object> parameters)
 		{
 			InProgress = true;
@@ -206,6 +240,12 @@ namespace Stocklist.Portable.ViewModels
 
 		#region Constructors
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="T:Stocklist.Portable.ViewModels.StockItemDetailsPageViewModel"/> class.
+		/// </summary>
+		/// <param name="navigation">Navigation.</param>
+		/// <param name="stocklistRepository">Stocklist repository.</param>
+		/// <param name="commandFactory">Command factory.</param>
 		public StockItemDetailsPageViewModel(INavigationService navigation, IStocklistRepository stocklistRepository,
 			Func<Action, ICommand> commandFactory) : base(navigation)
 		{

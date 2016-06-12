@@ -23,6 +23,9 @@ namespace Stocklist.iOS
 	using Stocklist.Portable.Ioc;
 	using Stocklist.Portable.Modules;
 
+	/// <summary>
+	/// App delegate.
+	/// </summary>
 	[Register("AppDelegate")]
 	public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
 	{
@@ -44,7 +47,7 @@ namespace Stocklist.iOS
 		}
 
 		/// <summary>
-		/// Inits the io c.
+		/// Inits the IoC container
 		/// </summary>
 		/// <returns>The io c.</returns>
 		private void initIoC()

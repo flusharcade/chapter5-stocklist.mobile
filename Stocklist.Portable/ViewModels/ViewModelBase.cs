@@ -37,6 +37,10 @@ namespace Stocklist.Portable.ViewModels
 
 		#region Constructors
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="T:Stocklist.Portable.ViewModels.ViewModelBase"/> class.
+		/// </summary>
+		/// <param name="navigation">Navigation.</param>
 		public ViewModelBase(INavigationService navigation)
 		{
 			Navigation = navigation;
@@ -77,6 +81,11 @@ namespace Stocklist.Portable.ViewModels
 				});
 		}
 
+		/// <summary>
+		/// Loads the view-model.
+		/// </summary>
+		/// <returns>The async.</returns>
+		/// <param name="parameters">Parameters.</param>
 		protected virtual async Task LoadAsync(IDictionary<string, object> parameters)
 		{
 		}

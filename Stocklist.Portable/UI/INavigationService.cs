@@ -24,4 +24,3 @@ namespace Stocklist.Portable.UI
 		Task Navigate (PageNames pageName, IDictionary<string, object> navigationParameters);
 	}
 }
-

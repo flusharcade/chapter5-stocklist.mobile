@@ -23,20 +23,40 @@ namespace Stocklist.Portable.ViewModels
 	{
 		#region Private Properties
 
+		/// <summary>
+		/// The stocklist repository.
+		/// </summary>
 		private readonly IStocklistRepository _stocklistRepository;
 
+		/// <summary>
+		/// The stock item factory.
+		/// </summary>
 		private readonly Func<StockItemViewModel> _stockItemFactory;
 
+		/// <summary>
+		/// The selected.
+		/// </summary>
 		private StockItemViewModel _selected;
 
+		/// <summary>
+		/// The in progress.
+		/// </summary>
 		private bool _inProgress;
 
 		#endregion
 
 		#region Public Properties
 
+		/// <summary>
+		/// Gets or sets the stock items.
+		/// </summary>
+		/// <value>The stock items.</value>
 		public ObservableCollection<StockItemViewModel> StockItems { get; set; }
 
+		/// <summary>
+		/// Gets or sets the selected.
+		/// </summary>
+		/// <value>The selected.</value>
 		public StockItemViewModel Selected
 		{
 			get
@@ -55,7 +75,7 @@ namespace Stocklist.Portable.ViewModels
 					Navigation.Navigate(Enums.PageNames.StockItemDetailsPage, new Dictionary<string, object>()
 					{
 						{"id", value.Id},
-					});
+					}).ConfigureAwait(false);
 				}
 
 				_selected = value;
@@ -63,6 +83,10 @@ namespace Stocklist.Portable.ViewModels
 			}
 		}
 
+		/// <summary>
+		/// Gets or sets the in progress.
+		/// </summary>
+		/// <value>The in progress.</value>
 		public bool InProgress
 		{
 			get
@@ -86,6 +110,11 @@ namespace Stocklist.Portable.ViewModels
 
 		#region Methods
 
+		/// <summary>
+		/// Loads the view-model.
+		/// </summary>
+		/// <returns>The async.</returns>
+		/// <param name="parameters">Parameters.</param>
 		protected override async Task LoadAsync(IDictionary<string, object> parameters)
 		{
 			try
@@ -120,6 +149,12 @@ namespace Stocklist.Portable.ViewModels
 
 		#region Constructors
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="T:Stocklist.Portable.ViewModels.StocklistPageViewModel"/> class.
+		/// </summary>
+		/// <param name="navigation">Navigation.</param>
+		/// <param name="stocklistRepository">Stocklist repository.</param>
+		/// <param name="stockItemFactory">Stock item factory.</param>
 		public StocklistPageViewModel(INavigationService navigation, IStocklistRepository stocklistRepository,
 			Func<StockItemViewModel> stockItemFactory) : base(navigation)
 		{

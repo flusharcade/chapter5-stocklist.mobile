@@ -15,19 +15,34 @@ namespace Stocklist.XamForms.Pages
 
 	using Stocklist.Portable.ViewModels;
 
+	/// <summary>
+	/// Stocklist page.
+	/// </summary>
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class StocklistPage : ContentPage, INavigableXamarinFormsPage
 	{
+		/// <summary>
+		/// Initializes a new instance of the <see cref="T:Stocklist.XamForms.Pages.StocklistPage"/> class.
+		/// </summary>
 		public StocklistPage()
 		{
 			InitializeComponent();
 		}
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="T:Stocklist.XamForms.Pages.StocklistPage"/> class.
+		/// </summary>
+		/// <param name="model">Model.</param>
 		public StocklistPage(StocklistPageViewModel model) : this()
 		{
 			BindingContext = model;
 		}
 
+		/// <summary>
+		/// Called when navigated to
+		/// </summary>
+		/// <returns>The navigated to.</returns>
+		/// <param name="navigationParameters">Navigation parameters.</param>
 		public void OnNavigatedTo(IDictionary<string, object> navigationParameters)
 		{
 			this.Show(navigationParameters);
