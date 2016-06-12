@@ -16,13 +16,13 @@ namespace Stocklist.Portable.ViewModels
 	{
 		#region Private Properties
 
-		private int id;
+		private int _id;
 
-		private string name;
+		private string _name;
 
-		private string category;
+		private string _category;
 
-		private decimal price;
+		private decimal _price;
 
 		#endregion
 
@@ -36,18 +36,18 @@ namespace Stocklist.Portable.ViewModels
 		{
 			get
 			{
-				return this.id;
+				return _id;
 			}
 
 			set
 			{
-				if (value.Equals(this.id))
+				if (value.Equals(_id))
 				{
 					return;
 				}
 
-				this.id = value;
-				this.OnPropertyChanged("Id");
+				_id = value;
+				OnPropertyChanged("Id");
 			}
 		}
 
@@ -59,18 +59,18 @@ namespace Stocklist.Portable.ViewModels
 		{
 			get
 			{
-				return this.name;
+				return _name;
 			}
 
 			set
 			{
-				if (value.Equals(this.name))
+				if (value.Equals(_name))
 				{
 					return;
 				}
 
-				this.name = value;
-				this.OnPropertyChanged("Name");
+				_name = value;
+				OnPropertyChanged("Name");
 			}
 		}
 
@@ -82,18 +82,18 @@ namespace Stocklist.Portable.ViewModels
 		{
 			get
 			{
-				return this.category;
+				return _category;
 			}
 
 			set
 			{
-				if (value.Equals(this.category))
+				if (value.Equals(_category))
 				{
 					return;
 				}
 
-				this.category = value;
-				this.OnPropertyChanged("Category");
+				_category = value;
+				OnPropertyChanged("Category");
 			}
 		}
 
@@ -105,18 +105,18 @@ namespace Stocklist.Portable.ViewModels
 		{
 			get
 			{
-				return this.price;
+				return _price;
 			}
 
 			set
 			{
-				if (value.Equals(this.price))
+				if (value.Equals(_price))
 				{
 					return;
 				}
 
-				this.price = value;
-				this.OnPropertyChanged("Price");
+				_price = value;
+				OnPropertyChanged("Price");
 			}
 		}
 
@@ -126,10 +126,10 @@ namespace Stocklist.Portable.ViewModels
 
 		public void Apply(StockItemContract contract)
 		{
-			this.Id = contract.Id;
-			this.Name = contract.Name;
-			this.Category = contract.Category;
-			this.Price = contract.Price;
+			Id = contract.Id;
+			Name = contract.Name;
+			Category = contract.Category;
+			Price = contract.Price;
 		}
 
 		#endregion

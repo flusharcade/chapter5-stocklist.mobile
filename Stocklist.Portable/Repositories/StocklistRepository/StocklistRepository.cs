@@ -46,7 +46,7 @@ namespace Stocklist.Portable.Repositories.StocklistRepository
 		/// <returns>The all stock items.</returns>
 		public IObservable<List<StockItemContract>> GetAllStockItems ()
 		{
-			var authClient = new HttpClient (this.clientHandler);
+			var authClient = new HttpClient (clientHandler);
 
 			var message = new HttpRequestMessage (HttpMethod.Get, new Uri (Config.ApiAllItems));
 
@@ -65,7 +65,7 @@ namespace Stocklist.Portable.Repositories.StocklistRepository
 
 		public IObservable<StockItemContract> GetStockItem(int id)
 		{
-			var authClient = new HttpClient(this.clientHandler);
+			var authClient = new HttpClient(clientHandler);
 
 			var message = new HttpRequestMessage(HttpMethod.Get, new Uri(string.Format(Config.GetStockItem, id)));
 
@@ -84,7 +84,7 @@ namespace Stocklist.Portable.Repositories.StocklistRepository
 
 		public async Task DeleteStockItem(int id)
 		{
-			var authClient = new HttpClient(this.clientHandler);
+			var authClient = new HttpClient(clientHandler);
 
 			await authClient.SendAsync(new HttpRequestMessage(HttpMethod.Post, new Uri(string.Format(Config.DeleteById, id))), new CancellationToken(false));
 		}
@@ -100,7 +100,7 @@ namespace Stocklist.Portable.Repositories.StocklistRepository
 		/// <param name="clientHandler">Client handler.</param>
 		public StocklistRepository(HttpClientHandler clientHandler)
 		{
-			this.clientHandler = clientHandler;
+			clientHandler = clientHandler;
 		}
 
 		#endregion

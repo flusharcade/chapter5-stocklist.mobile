@@ -121,7 +121,6 @@
     <Folder Include="Resources\" />
     <Folder Include="Extras\" />
     <Folder Include="Modules\" />
-    <Folder Include="Renderers\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -136,7 +135,6 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Extras\IOSMethods.cs" />
     <Compile Include="Modules\iOSModule.cs" />
-    <Compile Include="Renderers\CustomLabelRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\stocklist.png" />

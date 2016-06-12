@@ -6,9 +6,7 @@
 
 namespace Stocklist.XamForms.Pages
 {
-	using System;
 	using System.Collections.Generic;
-	using System.Linq;
 
 	using Xamarin.Forms;
 	using Xamarin.Forms.Xaml;
@@ -16,20 +14,18 @@ namespace Stocklist.XamForms.Pages
 	using Stocklist.XamForms.UI;
 
 	using Stocklist.Portable.ViewModels;
-	using Stocklist.Portable.Ioc;
 
+	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class StocklistPage : ContentPage, INavigableXamarinFormsPage
 	{
-		private StocklistPageViewModel viewModel;
-
 		public StocklistPage()
 		{
-			this.InitializeComponent();
+			InitializeComponent();
 		}
 
 		public StocklistPage(StocklistPageViewModel model) : this()
 		{
-			this.BindingContext = model;
+			BindingContext = model;
 		}
 
 		public void OnNavigatedTo(IDictionary<string, object> navigationParameters)

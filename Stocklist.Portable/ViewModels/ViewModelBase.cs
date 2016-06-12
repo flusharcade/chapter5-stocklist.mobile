@@ -39,7 +39,7 @@ namespace Stocklist.Portable.ViewModels
 
 		public ViewModelBase(INavigationService navigation)
 		{
-			this.Navigation = navigation;
+			Navigation = navigation;
 		}
 
 		#endregion
@@ -52,7 +52,7 @@ namespace Stocklist.Portable.ViewModels
 		/// <param name="propertyName">Property name.</param>
 		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
 		{
-			PropertyChangedEventHandler handler = this.PropertyChanged;
+			PropertyChangedEventHandler handler = PropertyChanged;
 
 			if (handler != null)
 			{
@@ -64,9 +64,9 @@ namespace Stocklist.Portable.ViewModels
 		/// </summary>
 		/// <param name="parameters">
 		/// </param>
-		public async void OnShow(IDictionary<string, object> parameters)
+		public void OnShow(IDictionary<string, object> parameters)
 		{
-			this.LoadAsync(parameters).ToObservable().Subscribe(
+			LoadAsync(parameters).ToObservable().Subscribe(
 				result =>
 				{
 					// we can add things to do after we load the view model

@@ -194,9 +194,9 @@ namespace Stocklist.Portable.ViewModels
 
 			if (contract != null)
 			{
-				this.Name = contract.Name;
-				this.Category = contract.Category;
-				this.Price = contract.Price;
+				Name = contract.Name;
+				Category = contract.Category;
+				Price = contract.Price;
 			}
 
 			InProgress = false;

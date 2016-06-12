@@ -29,7 +29,7 @@ namespace Stocklist.Droid
 		{
 			base.OnCreate(bundle);
 
-			this.initIoC();
+			initIoC();
 
 			global::Xamarin.Forms.Forms.Init(this, bundle);
 

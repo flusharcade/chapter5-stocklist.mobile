@@ -16,15 +16,15 @@ namespace Stocklist.XamForms.Pages
 	using Stocklist.XamForms.UI;
 
 	using Stocklist.Portable.ViewModels;
-	using Stocklist.Portable.Ioc;
 
+	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MainPage : ContentPage, INavigableXamarinFormsPage
 	{
-		private bool originalTemplate = true;
+		private bool _originalTemplate = true;
 
-		private ControlTemplate blackTemplate;
+		private ControlTemplate _blackTemplate;
 
-		private ControlTemplate whiteTemplate;
+		private ControlTemplate _whiteTemplate;
 
 		public static readonly BindableProperty StocklistCommandProperty = BindableProperty.Create("StocklistCommand", typeof(ICommand), typeof(MainPage), null);
 		public static readonly BindableProperty ExitCommandProperty = BindableProperty.Create("ExitCommand", typeof(ICommand), typeof(MainPage), null);
@@ -41,15 +41,15 @@ namespace Stocklist.XamForms.Pages
 
 		public MainPage()
 		{
-			this.InitializeComponent();
+			InitializeComponent();
 
-			blackTemplate = (ControlTemplate)Application.Current.Resources["MainBlackTemplate"];
-			whiteTemplate = (ControlTemplate)Application.Current.Resources["MainWhiteTemplate"];
+			_blackTemplate = (ControlTemplate)Application.Current.Resources["MainBlackTemplate"];
+			_whiteTemplate = (ControlTemplate)Application.Current.Resources["MainWhiteTemplate"];
 		}
 
 		public MainPage(MainPageViewModel model) : this()
 		{
-			this.BindingContext = model;
+			BindingContext = model;
 		}
 
 		public void OnNavigatedTo(IDictionary<string, object> navigationParameters)
@@ -59,9 +59,9 @@ namespace Stocklist.XamForms.Pages
 
 		public void ChangeThemeClicked(object sender, EventArgs e)
 		{
-			originalTemplate = !originalTemplate;
-			this.ControlTemplate = originalTemplate ? blackTemplate : whiteTemplate;
-			this.BackgroundColor = originalTemplate ? Color.Black : Color.White;
+			_originalTemplate = !_originalTemplate;
+			ControlTemplate = _originalTemplate ? _blackTemplate : _whiteTemplate;
+			BackgroundColor = _originalTemplate ? Color.Black : Color.White;
 		}
 	}
 }

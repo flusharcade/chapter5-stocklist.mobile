@@ -36,7 +36,7 @@ namespace Stocklist.iOS
 		{
 			global::Xamarin.Forms.Forms.Init();
 
-			this.initIoC();
+			initIoC();
 
 			LoadApplication(new App());
 

@@ -10,7 +10,7 @@ namespace Stocklist.XamForms.Controls
 
 	public class CustomLabel : Label
 	{
-		public static readonly BindableProperty AndroidFontStyleAndroidFontStyleProperty = BindableProperty.Create<CustomLabel, string>(
+		public static readonly BindableProperty AndroidFontStyleProperty = BindableProperty.Create<CustomLabel, string>(
 			p => p.AndroidFontStyle, default(string));
 
 		public string AndroidFontStyle

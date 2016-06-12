@@ -8,12 +8,7 @@
 
 namespace Stocklist.XamForms
 {
-	using System;
-
 	using Xamarin.Forms;
-	using Xamarin.Forms.Xaml;
-
-	using Stocklist.XamForms.Pages;
 
 	using Stocklist.Portable.Ioc;
 
@@ -21,7 +16,7 @@ namespace Stocklist.XamForms
 	{
 		public App()
 		{
-			this.InitializeComponent();
+			InitializeComponent();
 
 			// The Application ResourceDictionary is available in Xamarin.Forms 1.3 and later
 			if (Application.Current.Resources == null)
@@ -29,7 +24,7 @@ namespace Stocklist.XamForms
 				Application.Current.Resources = new ResourceDictionary();
 			}
 
-			this.MainPage = IoC.Resolve<NavigationPage>();
+			MainPage = IoC.Resolve<NavigationPage>();
 		}
 
 		protected override void OnStart()

@@ -29,7 +29,7 @@
 				<Setter Property="FontFamily" Value="Arial" />
             </Style>
 
-			<Style x:Key="CustomLabelStyle" TargetType="Label">
+			<Style x:Key="CustomLabelStyle" TargetType="controls:CustomLabel">
                 <Setter Property="TextColor" Value="Black" />
 				<Setter Property="FontFamily" Value="Gravur-Condensed" />
 				<Setter Property="AndroidFontStyle" Value="GraCoRg_" />

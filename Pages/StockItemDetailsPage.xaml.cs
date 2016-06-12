@@ -18,16 +18,17 @@ namespace Stocklist.XamForms.Pages
 	using Stocklist.Portable.ViewModels;
 	using Stocklist.Portable.Ioc;
 
+	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class StockItemDetailsPage : ContentPage, INavigableXamarinFormsPage
 	{
 		public StockItemDetailsPage()
 		{
-			this.InitializeComponent();
+			InitializeComponent();
 		}
 
 		public StockItemDetailsPage(Func<StockItemDetailsPageViewModel> modelFactory) : this()
 		{
-			this.BindingContext = modelFactory();
+			BindingContext = modelFactory();
 		}
 
 		public void OnNavigatedTo(IDictionary<string, object> navigationParameters)

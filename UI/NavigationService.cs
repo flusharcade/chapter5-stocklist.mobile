@@ -29,7 +29,7 @@ namespace Stocklist.XamForms.UI
 		/// <param name="navigationParameters">Navigation parameters.</param>
 		public async Task Navigate (PageNames pageName, IDictionary<string, object> navigationParameters)
 		{
-			var page = this.GetPage (pageName);
+			var page = GetPage (pageName);
 
 			if (page != null) 
 			{
