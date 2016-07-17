@@ -15,10 +15,17 @@ namespace Stocklist.Winphone.Extras
     /// </summary>
     public class WinphoneMethods : IMethods
     {
+		#region Public Methods
+
+		/// <summary>
+	    /// Exits the application
+	    /// </summary>
         public void Exit()
         {
             Application.Current.Exit();
         }
+
+		#endregion
     }
 }
 

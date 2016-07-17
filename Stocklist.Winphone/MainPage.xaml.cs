@@ -37,24 +37,30 @@ namespace Stocklist.Winphone
     /// </summary>
     public sealed partial class MainPage
     {
+		#region Public Methods
+
+		/// <summary>
+		/// Initializes a new instance of MainPage
+		/// </summary>
+		/// <returns>The io c.</returns>
         public MainPage()
         {
             InitializeComponent();
 
+			InitIoC();
 
-            try
-            {
-                InitIoC();
-
-                this.NavigationCacheMode = NavigationCacheMode.Required;
-                LoadApplication(new Stocklist.XamForms.App());
-            }
-            catch (Exception e)
-            {
-                System.Diagnostics.Debug.WriteLine(e);
-            }
+            this.NavigationCacheMode = NavigationCacheMode.Required;
+			LoadApplication(new Stocklist.XamForms.App());
         }
 
+		#endregion
+
+		#region Private Methods
+
+		/// <summary>
+		/// Inits the IoC container
+		/// </summary>
+		/// <returns>The io c.</returns>
         private void InitIoC()
         {
             IoC.CreateContainer();
@@ -64,5 +70,7 @@ namespace Stocklist.Winphone
             IoC.RegisterModule(new PortableModule());
             IoC.StartContainer();
         }
+
+		#endregion
     }
 }
