@@ -4,7 +4,7 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Stocklist.Portable.Repositories.StocklistRepository
+namespace Stocklist.Portable.WebServices.StocklistWebServiceController
 {
 	using System;
 	using System.Linq;

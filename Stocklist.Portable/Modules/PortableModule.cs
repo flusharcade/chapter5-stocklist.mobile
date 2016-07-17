@@ -14,7 +14,7 @@ namespace Stocklist.Portable.Modules
 	using Stocklist.Portable.ViewModels;
 	using Stocklist.Portable.UI;
 
-	using Stocklist.Portable.Repositories.StocklistRepository;
+	using Stocklist.Portable.WebServices.StocklistWebServiceController;
 
 	/// <summary>
 	/// Portable module.

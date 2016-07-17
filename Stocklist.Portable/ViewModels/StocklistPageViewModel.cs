@@ -10,11 +10,11 @@ namespace Stocklist.Portable.ViewModels
 	using System.Reactive.Linq;
 	using System.Linq;
 	using System.Collections.Generic;
-	using System.Threading.Tasks;
 	using System.Collections.ObjectModel;
+	using System.Threading.Tasks;
 
 	using Stocklist.Portable.UI;
-	using Stocklist.Portable.Repositories.StocklistRepository;
+	using Stocklist.Portable.WebServices.StocklistWebServiceController;
 
 	/// <summary>
 	/// Stocklist page view model.
@@ -26,7 +26,7 @@ namespace Stocklist.Portable.ViewModels
 		/// <summary>
 		/// The stocklist repository.
 		/// </summary>
-		private readonly IStocklistWebServiceController _stocklistRepository;
+		private readonly IStocklistWebServiceController _stocklistWebServiceController;
 
 		/// <summary>
 		/// The stock item factory.
@@ -124,7 +124,7 @@ namespace Stocklist.Portable.ViewModels
 				// reset the list everytime we load the page
 				StockItems.Clear();
 
-				var stockItems = await _stocklistRepository.GetAllStockItems();
+				var stockItems = await _stocklistWebServiceController.GetAllStockItems();
 
 				// for all contracts build stock item view model and add to the observable collection
 				foreach (var model in stockItems.Select(x =>
@@ -153,14 +153,14 @@ namespace Stocklist.Portable.ViewModels
 		/// Initializes a new instance of the <see cref="T:Stocklist.Portable.ViewModels.StocklistPageViewModel"/> class.
 		/// </summary>
 		/// <param name="navigation">Navigation.</param>
-		/// <param name="stocklistRepository">Stocklist repository.</param>
+		/// <param name="stocklistWebServiceController">Stocklist repository.</param>
 		/// <param name="stockItemFactory">Stock item factory.</param>
-		public StocklistPageViewModel(INavigationService navigation, IStocklistWebServiceController stocklistRepository,
+		public StocklistPageViewModel(INavigationService navigation, IStocklistWebServiceController stocklistWebServiceController,
 			Func<StockItemViewModel> stockItemFactory) : base(navigation)
 		{
 			_stockItemFactory = stockItemFactory;
 
-			_stocklistRepository = stocklistRepository;
+			_stocklistWebServiceController = stocklistWebServiceController;
 
 			StockItems = new ObservableCollection<StockItemViewModel>();
 		}

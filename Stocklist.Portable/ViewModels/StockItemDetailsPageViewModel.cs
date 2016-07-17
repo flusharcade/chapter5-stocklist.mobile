@@ -7,32 +7,25 @@
 namespace Stocklist.Portable.ViewModels
 {
 	using System;
-	using System.Reactive.Subjects;
 	using System.Reactive.Linq;
-	using System.Linq;
 	using System.Collections.Generic;
 	using System.Threading.Tasks;
-	using System.Collections.ObjectModel;
 	using System.Windows.Input;
 
 	using Stocklist.Portable.UI;
-	using Stocklist.Portable.Repositories.StocklistRepository;
+	using Stocklist.Portable.WebServices.StocklistWebServiceController;
 
 	/// <summary>
 	/// Stocklist page view model.
 	/// </summary>
 	public class StockItemDetailsPageViewModel : ViewModelBase
 	{
-		#region Subjects
-
-		#endregion
-
 		#region Private Properties
 
 		/// <summary>
 		/// The stocklist repository.
 		/// </summary>
-		private readonly IStocklistWebServiceController _stocklistRepository;
+		private readonly IStocklistWebServiceController _stocklistWebServiceController;
 
 		/// <summary>
 		/// The identifier.
@@ -224,7 +217,7 @@ namespace Stocklist.Portable.ViewModels
 				Id = (int)parameters["id"];
 			}
 
-			var contract = await _stocklistRepository.GetStockItem(Id);
+			var contract = await _stocklistWebServiceController.GetStockItem(Id);
 
 			if (contract != null)
 			{
@@ -244,16 +237,16 @@ namespace Stocklist.Portable.ViewModels
 		/// Initializes a new instance of the <see cref="T:Stocklist.Portable.ViewModels.StockItemDetailsPageViewModel"/> class.
 		/// </summary>
 		/// <param name="navigation">Navigation.</param>
-		/// <param name="stocklistRepository">Stocklist repository.</param>
+		/// <param name="stocklistWebServiceController">Stocklist repository.</param>
 		/// <param name="commandFactory">Command factory.</param>
-		public StockItemDetailsPageViewModel(INavigationService navigation, IStocklistWebServiceController stocklistRepository,
+		public StockItemDetailsPageViewModel(INavigationService navigation, IStocklistWebServiceController stocklistWebServiceController,
 			Func<Action, ICommand> commandFactory) : base(navigation)
 		{
-			_stocklistRepository = stocklistRepository;
+			_stocklistWebServiceController = stocklistWebServiceController;
 
 			_deleteCommand = commandFactory(() =>
 			{
-				_stocklistRepository.DeleteStockItem(Id);
+				_stocklistWebServiceController.DeleteStockItem(Id);
 			});
 		}
 

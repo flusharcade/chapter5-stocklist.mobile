@@ -1,14 +1,14 @@
-﻿<Properties StartupItem="Droid/Stocklist.Droid.csproj">
-  <MonoDevelop.Ide.Workbench ActiveDocument="obj/Debug/Stocklist.XamForms.App.xaml.g.cs">
+﻿<Properties StartupItem="iOS/Stocklist.iOS.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Stocklist.Portable/Modules/PortableModule.cs">
     <Files>
-      <File FileName="obj/Debug/Stocklist.XamForms.Pages.MainPage.xaml.g.cs" Line="21" Column="13" />
-      <File FileName="obj/Debug/Stocklist.XamForms.Pages.StocklistPage.xaml.g.cs" Line="29" Column="34" />
-      <File FileName="obj/Debug/Stocklist.XamForms.Pages.StockItemDetailsPage.xaml.g.cs" Line="36" Column="13" />
-      <File FileName="obj/Debug/Stocklist.XamForms.App.xaml.g.cs" Line="21" Column="18" />
+      <File FileName="Droid/MainActivity.cs" Line="9" Column="1" />
+      <File FileName="Stocklist.Portable/ViewModels/StockItemDetailsPageViewModel.cs" Line="1" Column="1" />
+      <File FileName="Stocklist.Portable/ViewModels/StocklistPageViewModel.cs" Line="1" Column="1" />
+      <File FileName="Stocklist.Portable/Modules/PortableModule.cs" Line="17" Column="59" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Stocklist.Droid PreferredExecutionTarget="Android.TA38503PQ6" />
+  <MonoDevelop.Ide.ItemProperties.Stocklist.Droid PreferredExecutionTarget="Android.Android-Emulator" />
   <MonoDevelop.Ide.ItemProperties.Stocklist.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.A10AC0B6-78D2-48A4-92EF-01D011AFA406" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
