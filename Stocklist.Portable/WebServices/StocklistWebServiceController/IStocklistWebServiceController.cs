@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="IGeocodingRepository.cs" company="Flush Arcade">
-//   Copyright (c) 2015 Flush Arcade All rights reserved.
+// <copyright file="IGeocodingRepository.cs" company="Flush Arcade Pty Ltd.">
+//   Copyright (c) 2015 Flush Arcade Pty Ltd. All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -10,12 +10,12 @@ namespace Stocklist.Portable.Repositories.StocklistRepository
 	using System.Collections.Generic;
 	using System.Threading.Tasks;
 
-	using Stocklist.Portable.Repositories.GeocodingRepository.Contracts;
+	using Stocklist.Portable.Repositories.StocklistWebServiceController.Contracts;
 
 	/// <summary>
-	/// The stock item repository interface.
+	/// The stock item web service controller interface.
 	/// </summary>
-	public interface IStocklistRepository
+	public interface IStocklistWebServiceController
 	{
 		#region Methods and Operators
 

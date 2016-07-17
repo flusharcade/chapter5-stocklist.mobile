@@ -1,44 +1,15 @@
 ﻿<Properties StartupItem="Droid/Stocklist.Droid.csproj">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Pages/StocklistPage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="obj/Debug/Stocklist.XamForms.App.xaml.g.cs">
     <Files>
-      <File FileName="Stocklist.Portable/ViewModels/MainPageViewModel.cs" Line="131" Column="1" />
-      <File FileName="Stocklist.Portable/UI/INavigationService.cs" Line="24" Column="8" />
-      <File FileName="UI/NavigationService.cs" Line="41" Column="1" />
-      <File FileName="Stocklist.Portable/ViewModels/StocklistPageViewModel.cs" Line="75" Column="41" />
-      <File FileName="Droid/MainActivity.cs" Line="47" Column="3" />
-      <File FileName="iOS/AppDelegate.cs" Line="57" Column="4" />
-      <File FileName="Pages/StocklistPage.xaml.cs" Line="48" Column="1" />
+      <File FileName="obj/Debug/Stocklist.XamForms.Pages.MainPage.xaml.g.cs" Line="21" Column="13" />
+      <File FileName="obj/Debug/Stocklist.XamForms.Pages.StocklistPage.xaml.g.cs" Line="29" Column="34" />
+      <File FileName="obj/Debug/Stocklist.XamForms.Pages.StockItemDetailsPage.xaml.g.cs" Line="36" Column="13" />
+      <File FileName="obj/Debug/Stocklist.XamForms.App.xaml.g.cs" Line="21" Column="18" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Stocklist" expanded="True">
-            <Node name="Stocklist.Droid" expanded="True">
-              <Node name="References" expanded="True" />
-            </Node>
-            <Node name="Stocklist.iOS" expanded="True">
-              <Node name="Modules" expanded="True" />
-            </Node>
-            <Node name="Stocklist.Portable" expanded="True">
-              <Node name="UI" expanded="True" />
-              <Node name="ViewModels" expanded="True" />
-            </Node>
-            <Node name="Stocklist.XamForms" expanded="True">
-              <Node name="Pages" expanded="True">
-                <Node name="StocklistPage.xaml" expanded="True">
-                  <Node name="StocklistPage.xaml.cs" selected="True" />
-                </Node>
-              </Node>
-              <Node name="UI" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Stocklist.Droid PreferredExecutionTarget="Android.0fa398fd" />
-  <MonoDevelop.Ide.ItemProperties.Stocklist.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.4D94D0EF-12F5-45B6-83B6-58F50C2938C0" />
+  <MonoDevelop.Ide.ItemProperties.Stocklist.Droid PreferredExecutionTarget="Android.TA38503PQ6" />
+  <MonoDevelop.Ide.ItemProperties.Stocklist.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.A10AC0B6-78D2-48A4-92EF-01D011AFA406" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/mww121/Desktop/FlushArcade/PACKT Publishing/Xamarin Blueprints/Chapters/Chapter 5/Stocklist/App.xaml" line="84" column="1" />

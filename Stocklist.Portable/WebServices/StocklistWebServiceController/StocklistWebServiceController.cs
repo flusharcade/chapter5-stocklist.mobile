@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="StocklistRepository.cs" company="Flush Arcade">
-//   Copyright (c) 2015 Flush Arcade All rights reserved.
+// <copyright file="StocklistRepository.cs" company="Flush Arcade Pty Ltd.">
+//   Copyright (c) 2015 Flush Arcade Pty Ltd. All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -21,13 +21,13 @@ namespace Stocklist.Portable.Repositories.StocklistRepository
 	using Newtonsoft.Json;
 	using Newtonsoft.Json.Linq;
 
-	using Stocklist.Portable.Repositories.GeocodingRepository.Contracts;
+	using Stocklist.Portable.Repositories.StocklistWebServiceController.Contracts;
 	using Stocklist.Portable.Resources;
 
 	/// <summary>
-	/// Geocoding repository.
+	/// Stocklist web service controller.
 	/// </summary>
-	public sealed class StocklistRepository : IStocklistRepository
+	public sealed class StocklistWebServiceController : IStocklistWebServiceController
 	{
 		#region Fields
 
@@ -96,14 +96,14 @@ namespace Stocklist.Portable.Repositories.StocklistRepository
 
 		#endregion
 
-		#region Constructors and Destructors
+		#region Constructors
 
 		/// <summary>
 		/// Initializes a new instance of the
-		/// <see cref="T:Stocklist.Portable.Repositories.GeocodingRepository.GeocodingRepository"/> class.
+		/// <see cref="T:Stocklist.Portable.Repositories.StocklistWebServiceController.GeocodingRepository"/> class.
 		/// </summary>
 		/// <param name="clientHandler">Client handler.</param>
-		public StocklistRepository(HttpClientHandler clientHandler)
+		public StocklistWebServiceController(HttpClientHandler clientHandler)
 		{
 			_clientHandler = clientHandler;
 		}

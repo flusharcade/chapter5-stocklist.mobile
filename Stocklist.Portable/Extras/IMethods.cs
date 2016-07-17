@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="IMethods.cs" company="Flush Arcade">
-//   Copyright (c) 2015 Flush Arcade All rights reserved.
+// <copyright file="IMethods.cs" company="Flush Arcade Pty Ltd.">
+//   Copyright (c) 2015 Flush Arcade Pty Ltd. All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -11,6 +11,13 @@ namespace Stocklist.Portable.Extras
 	/// </summary>
 	public interface IMethods
 	{
+		#region Methods
+
+		/// <summary>
+		/// Exit this instance.
+		/// </summary>
 		void Exit();
+
+		#endregion
 	}
 }

@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="AppDelegate.cs" company="Flush Arcade">
-//   Copyright (c) 2015 Flush Arcade All rights reserved.
+// <copyright file="AppDelegate.cs" company="Flush Arcade Pty Ltd.">
+//   Copyright (c) 2015 Flush Arcade Pty Ltd. All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -29,6 +29,8 @@ namespace Stocklist.iOS
 	[Register("AppDelegate")]
 	public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
 	{
+		#region Public Methods
+
 		/// <summary>
 		/// Finisheds the launching.
 		/// </summary>
@@ -39,18 +41,22 @@ namespace Stocklist.iOS
 		{
 			global::Xamarin.Forms.Forms.Init();
 
-			initIoC();
+			InitIoC();
 
 			LoadApplication(new App());
 
 			return base.FinishedLaunching(app, options);
 		}
 
+		#endregion
+
+		#region Private Methods
+
 		/// <summary>
 		/// Inits the IoC container
 		/// </summary>
 		/// <returns>The io c.</returns>
-		private void initIoC()
+		private void InitIoC()
 		{
 			IoC.CreateContainer();
 			IoC.RegisterModule(new IOSModule());
@@ -59,5 +65,7 @@ namespace Stocklist.iOS
 			IoC.RegisterModule(new PortableModule());
 			IoC.StartContainer();
 		}
+
+		#endregion
 	}
 }

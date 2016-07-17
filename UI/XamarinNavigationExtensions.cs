@@ -23,7 +23,7 @@ namespace Stocklist.XamForms.UI
 	/// </summary>
 	public static class XamarinNavigationExtensions
 	{
-		#region Public Methods and Operators
+		#region Public Methods
 
 		/// <summary>
 		/// Show the specified page and parameters.

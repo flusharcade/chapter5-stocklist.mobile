@@ -116,6 +116,14 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Flush App Icon - 114px.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Flush App Icon - 120px.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Flush App Icon - 144px.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Flush App Icon - 152px.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Flush App Icon - 167px.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Flush App Icon - 180px.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Flush App Icon - 87px.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />

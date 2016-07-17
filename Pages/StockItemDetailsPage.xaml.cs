@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="StockItemDetailsPage.cs" company="Flush Arcade">
-//   Copyright (c) 2015 Flush Arcade All rights reserved.
+// <copyright file="StockItemDetailsPage.cs" company="Flush Arcade Pty Ltd.">
+//   Copyright (c) 2015 Flush Arcade Pty Ltd. All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -24,6 +24,8 @@ namespace Stocklist.XamForms.Pages
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class StockItemDetailsPage : ContentPage, INavigableXamarinFormsPage
 	{
+		#region Constructors
+
 		/// <summary>
 		/// Initializes a new instance of the <see cref="T:Stocklist.XamForms.Pages.StockItemDetailsPage"/> class.
 		/// </summary>
@@ -41,6 +43,10 @@ namespace Stocklist.XamForms.Pages
 			BindingContext = modelFactory();
 		}
 
+		#endregion
+
+		#region Public Methods
+
 		/// <summary>
 		/// Called when navigated to
 		/// </summary>
@@ -50,5 +56,7 @@ namespace Stocklist.XamForms.Pages
 		{
 			this.Show(navigationParameters);
 		}
+
+		#endregion
 	}
 }

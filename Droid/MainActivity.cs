@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="MainActivity.cs" company="Flush Arcade">
-//   Copyright (c) 2015 Flush Arcade All rights reserved.
+// <copyright file="MainActivity.cs" company="Flush Arcade Pty Ltd.">
+//   Copyright (c) 2015 Flush Arcade Pty Ltd. All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -25,6 +25,8 @@ namespace Stocklist.Droid
 	[Activity(Label = "Stocklist.Portable.Droid", Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
 	{
+		#region Protected Methods
+
 		/// <summary>
 		/// OnCreate override for MainActivity
 		/// </summary>
@@ -41,6 +43,10 @@ namespace Stocklist.Droid
 			LoadApplication(new XamForms.App());
 		}
 
+		#endregion
+
+		#region Private Methods
+
 		/// <summary>
 		/// Initialise the IoC container
 		/// </summary>
@@ -53,5 +59,7 @@ namespace Stocklist.Droid
 			IoC.RegisterModule(new PortableModule());
 			IoC.StartContainer();
 		}
+
+		#endregion
 	}
 }

@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="IOSModule.cs" company="Flush Arcade">
-//   Copyright (c) 2015 Flush Arcade All rights reserved.
+// <copyright file="IOSModule.cs" company="Flush Arcade Pty Ltd.">
+//   Copyright (c) 2015 Flush Arcade Pty Ltd. All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -18,6 +18,8 @@ namespace Stocklist.iOS.Modules
 	/// </summary>
 	public class IOSModule : IModule
 	{
+		#region Public Methods
+
 		/// <summary>
 		/// Register the specified builer.
 		/// </summary>
@@ -26,5 +28,7 @@ namespace Stocklist.iOS.Modules
 		{
 			builer.RegisterType<IOSMethods>().As<IMethods>().SingleInstance();
 		}
+
+		#endregion
 	}
 }

@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="MainPageViewModel.cs" company="Flush Arcade">
-//   Copyright (c) 2015 Flush Arcade All rights reserved.
+// <copyright file="MainPageViewModel.cs" company="Flush Arcade Pty Ltd.">
+//   Copyright (c) 2015 Flush Arcade Pty Ltd. All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -10,7 +10,7 @@ namespace Stocklist.Portable.ViewModels
 	using Stocklist.Portable.UI;
 	using Stocklist.Portable.Extras;
 
-	using Stocklist.Portable.Repositories.GeocodingRepository.Contracts;
+	using Stocklist.Portable.Repositories.StocklistWebServiceController.Contracts;
 
 	/// <summary>
 	/// Stock item view model.

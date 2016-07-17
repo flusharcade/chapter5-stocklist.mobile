@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="App.cs" company="Flush Arcade">
-//   Copyright (c) 2015 Flush Arcade All rights reserved.
+// <copyright file="App.cs" company="Flush Arcade Pty Ltd.">
+//   Copyright (c) 2015 Flush Arcade Pty Ltd. All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -17,6 +17,8 @@ namespace Stocklist.XamForms
 	/// </summary>
 	public partial class App : Application
 	{
+		#region Constructors
+
 		/// <summary>
 		/// Initializes a new instance of the <see cref="T:Stocklist.XamForms.App"/> class.
 		/// </summary>
@@ -32,6 +34,10 @@ namespace Stocklist.XamForms
 
 			MainPage = IoC.Resolve<NavigationPage>();
 		}
+
+		#endregion
+
+		#region Protected Methods
 
 		/// <summary>
 		/// Override the starting function
@@ -59,6 +65,7 @@ namespace Stocklist.XamForms
 		{
 			// Handle when your app resumes
 		}
+
+		#endregion
 	}
 }
-

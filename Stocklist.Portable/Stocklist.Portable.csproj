@@ -37,9 +37,9 @@
     <Compile Include="ViewModels\StocklistPageViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="UI\INavigationService.cs" />
-    <Compile Include="Repositories\StocklistRepository\StocklistRepository.cs" />
-    <Compile Include="Repositories\StocklistRepository\IStocklistRepository.cs" />
-    <Compile Include="Repositories\StocklistRepository\Contracts\StockItemContract.cs" />
+    <Compile Include="WebServices\StocklistWebServiceController\StocklistWebServiceController.cs" />
+    <Compile Include="WebServices\StocklistWebServiceController\IStocklistWebServiceController.cs" />
+    <Compile Include="WebServices\StocklistWebServiceController\Contracts\StockItemContract.cs" />
     <Compile Include="Modules\PortableModule.cs" />
     <Compile Include="IoC\IModule.cs" />
     <Compile Include="IoC\IoC.cs" />

@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------
-//  <copyright file="NotConverter.cs" company="Flush Arcade">
-//    Copyright (c) 2015 Flush Arcade All rights reserved.
+//  <copyright file="NotConverter.cs" company="Flush Arcade Pty Ltd.">
+//    Copyright (c) 2015 Flush Arcade Pty Ltd. All rights reserved.
 //  </copyright>
 // --------------------------------------------------------------------------------------------------
 
@@ -15,6 +15,8 @@ namespace Stocklist.XamForms.Converters
 	/// </summary>
 	public class NotConverter : IValueConverter
 	{
+		#region Public Methods
+
 		/// <summary>
 		/// Convert the specified value, targetType, parameter and culture.
 		/// </summary>
@@ -46,5 +48,7 @@ namespace Stocklist.XamForms.Converters
 		{
 			throw new NotImplementedException();
 		}
+
+		#endregion
 	}
 }

@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="GradientViewRenderer.cs" company="Flush Arcade">
-//   Copyright (c) 2015 Flush Arcade All rights reserved.
+// <copyright file="CustomLabelRenderer.cs" company="Flush Arcade Pty Ltd.">
+//   Copyright (c) 2015 Flush Arcade Pty Ltd. All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -22,6 +22,8 @@ namespace Stocklist.Droid.Renderers.CustomLabel
 	/// </summary>
 	public class CustomLabelRenderer : LabelRenderer
 	{
+		#region Protected Methods
+
 		/// <summary>
 		/// Called when element changes
 		/// </summary>
@@ -51,5 +53,7 @@ namespace Stocklist.Droid.Renderers.CustomLabel
 				}
 			}
 		}
+
+		#endregion
 	}
 }

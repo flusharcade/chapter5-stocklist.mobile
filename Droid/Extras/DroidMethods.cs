@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="IMethods.cs" company="Flush Arcade">
-//   Copyright (c) 2015 Flush Arcade All rights reserved.
+// <copyright file="IMethods.cs" company="Flush Arcade Pty Ltd.">
+//   Copyright (c) 2015 Flush Arcade Pty Ltd. All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -14,6 +14,8 @@ namespace Stocklist.Droid.Extras
 	/// </summary>
 	public class DroidMethods : IMethods
 	{
+		#region Public Methods
+
 		/// <summary>
 		/// Exit this instance.
 		/// </summary>
@@ -21,6 +23,7 @@ namespace Stocklist.Droid.Extras
 		{
 			Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
 		}
+
+		#endregion
 	}
 }
-

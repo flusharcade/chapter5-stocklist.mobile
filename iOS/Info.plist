@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>Stocklist</string>
+	<string>Stocklist.iOS</string>
 	<key>CFBundleName</key>
-	<string>Stocklist</string>
+	<string>Stocklist.iOS</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.flusharcade.stocklist.stocklist</string>
 	<key>CFBundleShortVersionString</key>

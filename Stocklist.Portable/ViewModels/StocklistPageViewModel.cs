@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="StocklistPageViewModel.cs" company="Flush Arcade">
-//   Copyright (c) 2015 Flush Arcade All rights reserved.
+// <copyright file="StocklistPageViewModel.cs" company="Flush Arcade Pty Ltd.">
+//   Copyright (c) 2015 Flush Arcade Pty Ltd. All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -26,7 +26,7 @@ namespace Stocklist.Portable.ViewModels
 		/// <summary>
 		/// The stocklist repository.
 		/// </summary>
-		private readonly IStocklistRepository _stocklistRepository;
+		private readonly IStocklistWebServiceController _stocklistRepository;
 
 		/// <summary>
 		/// The stock item factory.
@@ -155,7 +155,7 @@ namespace Stocklist.Portable.ViewModels
 		/// <param name="navigation">Navigation.</param>
 		/// <param name="stocklistRepository">Stocklist repository.</param>
 		/// <param name="stockItemFactory">Stock item factory.</param>
-		public StocklistPageViewModel(INavigationService navigation, IStocklistRepository stocklistRepository,
+		public StocklistPageViewModel(INavigationService navigation, IStocklistWebServiceController stocklistRepository,
 			Func<StockItemViewModel> stockItemFactory) : base(navigation)
 		{
 			_stockItemFactory = stockItemFactory;

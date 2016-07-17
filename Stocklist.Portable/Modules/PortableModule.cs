@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="PortableModule.cs" company="Flush Arcade">
-//   Copyright (c) 2015 Flush Arcade All rights reserved.
+// <copyright file="PortableModule.cs" company="Flush Arcade Pty Ltd.">
+//   Copyright (c) 2015 Flush Arcade Pty Ltd. All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -21,6 +21,8 @@ namespace Stocklist.Portable.Modules
 	/// </summary>
 	public class PortableModule : IModule
 	{
+		#region Public Methods
+
 		/// <summary>
 		/// Register the specified builer.
 		/// </summary>
@@ -33,7 +35,9 @@ namespace Stocklist.Portable.Modules
 
 			builer.RegisterType<StockItemViewModel>().InstancePerDependency();
 
-			builer.RegisterType<StocklistRepository> ().As<IStocklistRepository>().SingleInstance();
+			builer.RegisterType<StocklistWebServiceController> ().As<IStocklistWebServiceController>().SingleInstance();
 		}
+
+		#endregion
 	}
 }

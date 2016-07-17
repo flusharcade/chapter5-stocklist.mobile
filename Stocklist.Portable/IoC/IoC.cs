@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="IoC.cs" company="Flush Arcade">
-//   Copyright (c) 2015 Flush Arcade All rights reserved.
+// <copyright file="IoC.cs" company="Flush Arcade Pty Ltd.">
+//   Copyright (c) 2015 Flush Arcade Pty Ltd. All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -12,20 +12,30 @@ namespace Stocklist.Portable.Ioc
 	using Autofac;
 
 	/// <summary>
-	/// Io c.
+	/// The IoC container.
 	/// </summary>
 	public static class IoC
 	{
+		#region Public Static Properties
+
 		/// <summary>
 		/// Gets the container.
 		/// </summary>
 		/// <value>The container.</value>
 		public static IContainer Container { get; private set; }
 
+		#endregion
+
+		#region Private Static Properties
+
 		/// <summary>
 		/// The builder.
 		/// </summary>
 		private static ContainerBuilder builder;
+
+		#endregion
+
+		#region Public Static Methods
 
 		/// <summary>
 		/// Creates the container.
@@ -76,6 +86,7 @@ namespace Stocklist.Portable.Ioc
 		{
 			return Container.Resolve<T> ();
 		}
+
+		#endregion
 	}
 }
-

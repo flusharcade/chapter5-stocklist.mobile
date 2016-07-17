@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="MainPage.cs" company="Flush Arcade">
-//   Copyright (c) 2015 Flush Arcade All rights reserved.
+// <copyright file="MainPage.cs" company="Flush Arcade Pty Ltd.">
+//   Copyright (c) 2015 Flush Arcade Pty Ltd. All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -23,6 +23,8 @@ namespace Stocklist.XamForms.Pages
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MainPage : ContentPage, INavigableXamarinFormsPage
 	{
+		#region Private Properties
+
 		/// <summary>
 		/// The original template.
 		/// </summary>
@@ -38,10 +40,23 @@ namespace Stocklist.XamForms.Pages
 		/// </summary>
 		private ControlTemplate _whiteTemplate;
 
+		#endregion
+
+		#region Public Static Properties
+
 		/// <summary>
 		/// The stocklist command property.
 		/// </summary>
 		public static readonly BindableProperty StocklistCommandProperty = BindableProperty.Create("StocklistCommand", typeof(ICommand), typeof(MainPage), null);
+
+		/// <summary>
+		/// The exit command property.
+		/// </summary>
+		public static readonly BindableProperty ExitCommandProperty = BindableProperty.Create("ExitCommand", typeof(ICommand), typeof(MainPage), null);
+
+		#endregion
+
+		#region Public Properties
 
 		/// <summary>
 		/// Gets the stocklist command.
@@ -53,11 +68,6 @@ namespace Stocklist.XamForms.Pages
 		}
 
 		/// <summary>
-		/// The exit command property.
-		/// </summary>
-		public static readonly BindableProperty ExitCommandProperty = BindableProperty.Create("ExitCommand", typeof(ICommand), typeof(MainPage), null);
-
-		/// <summary>
 		/// Gets the exit command.
 		/// </summary>
 		/// <value>The exit command.</value>
@@ -65,6 +75,10 @@ namespace Stocklist.XamForms.Pages
 		{
 			get { return (ICommand)GetValue(ExitCommandProperty); }
 		}
+
+		#endregion
+
+		#region Constructors
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="T:Stocklist.XamForms.Pages.MainPage"/> class.
@@ -85,6 +99,10 @@ namespace Stocklist.XamForms.Pages
 		{
 			BindingContext = model;
 		}
+
+		#endregion
+
+		#region Public Methods
 
 		/// <summary>
 		/// Called when navigated to
@@ -108,5 +126,7 @@ namespace Stocklist.XamForms.Pages
 			ControlTemplate = _originalTemplate ? _blackTemplate : _whiteTemplate;
 			BackgroundColor = _originalTemplate ? Color.Black : Color.White;
 		}
+
+		#endregion
 	}
 }
