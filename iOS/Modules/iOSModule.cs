@@ -21,12 +21,12 @@ namespace Stocklist.iOS.Modules
 		#region Public Methods
 
 		/// <summary>
-		/// Register the specified builer.
+		/// Register the specified builder.
 		/// </summary>
-		/// <param name="builer">Builer.</param>
-		public void Register(ContainerBuilder builer)
+		/// <param name="builder">builder.</param>
+		public void Register(ContainerBuilder builder)
 		{
-			builer.RegisterType<IOSMethods>().As<IMethods>().SingleInstance();
+			builder.RegisterType<IOSMethods>().As<IMethods>().SingleInstance();
 		}
 
 		#endregion

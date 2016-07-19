@@ -24,18 +24,18 @@ namespace Stocklist.Portable.Modules
 		#region Public Methods
 
 		/// <summary>
-		/// Register the specified builer.
+		/// Register the specified builder.
 		/// </summary>
-		/// <param name="builer">Builer.</param>
-		public void Register(ContainerBuilder builer)
+		/// <param name="builder">builder.</param>
+		public void Register(ContainerBuilder builder)
 		{
-			builer.RegisterType<MainPageViewModel> ().SingleInstance();
-			builer.RegisterType<StocklistPageViewModel> ().SingleInstance();
-			builer.RegisterType<StockItemDetailsPageViewModel>().InstancePerDependency();
+			builder.RegisterType<MainPageViewModel> ().SingleInstance();
+			builder.RegisterType<StocklistPageViewModel> ().SingleInstance();
+			builder.RegisterType<StockItemDetailsPageViewModel>().InstancePerDependency();
 
-			builer.RegisterType<StockItemViewModel>().InstancePerDependency();
+			builder.RegisterType<StockItemViewModel>().InstancePerDependency();
 
-			builer.RegisterType<StocklistWebServiceController> ().As<IStocklistWebServiceController>().SingleInstance();
+			builder.RegisterType<StocklistWebServiceController> ().As<IStocklistWebServiceController>().SingleInstance();
 		}
 
 		#endregion

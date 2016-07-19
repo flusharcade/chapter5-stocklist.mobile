@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="MainPageViewModel.cs" company="Flush Arcade Pty Ltd.">
+// <copyright file="StockItemViewModel.cs" company="Flush Arcade Pty Ltd.">
 //   Copyright (c) 2015 Flush Arcade Pty Ltd. All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------

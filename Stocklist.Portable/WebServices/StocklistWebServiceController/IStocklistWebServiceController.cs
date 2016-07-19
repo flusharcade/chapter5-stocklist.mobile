@@ -32,13 +32,6 @@ namespace Stocklist.Portable.WebServices.StocklistWebServiceController
 		/// <param name="id">Identifier.</param>
 		IObservable<StockItemContract> GetStockItem(int id);
 
-		/// <summary>
-		/// Deletes the item by identifier.
-		/// </summary>
-		/// <returns>The item by identifier.</returns>
-		/// <param name="id">Identifier.</param>
-		Task DeleteStockItem(int id);
-
 		#endregion
 	}
 }

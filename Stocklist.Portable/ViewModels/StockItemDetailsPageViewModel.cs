@@ -52,11 +52,6 @@ namespace Stocklist.Portable.ViewModels
 		/// </summary>
 		private bool _inProgress;
 
-		/// <summary>
-		/// The delete command.
-		/// </summary>
-		private ICommand _deleteCommand;
-
 		#endregion
 
 		#region Public Properties
@@ -176,29 +171,6 @@ namespace Stocklist.Portable.ViewModels
 			}
 		}
 
-		/// <summary>
-		/// Gets or sets the pricete command.
-		/// </summary>
-		/// <value>The pricete command.</value>
-		public ICommand _priceteCommand
-		{
-			get
-			{
-				return _deleteCommand;
-			}
-
-			set
-			{
-				if (value.Equals(_deleteCommand))
-				{
-					return;
-				}
-
-				_deleteCommand = value;
-				OnPropertyChanged("DeleteCommand");
-			}
-		}
-
 		#endregion
 
 		#region Methods
@@ -243,11 +215,6 @@ namespace Stocklist.Portable.ViewModels
 			Func<Action, ICommand> commandFactory) : base(navigation)
 		{
 			_stocklistWebServiceController = stocklistWebServiceController;
-
-			_deleteCommand = commandFactory(() =>
-			{
-				_stocklistWebServiceController.DeleteStockItem(Id);
-			});
 		}
 
 		#endregion

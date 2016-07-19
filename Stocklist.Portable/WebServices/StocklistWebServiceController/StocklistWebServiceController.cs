@@ -87,13 +87,6 @@ namespace Stocklist.Portable.WebServices.StocklistWebServiceController
 				.Select(json => JsonConvert.DeserializeObject<StockItemContract>(json));
 		}
 
-		public async Task DeleteStockItem(int id)
-		{
-			var authClient = new HttpClient(_clientHandler);
-
-			await authClient.SendAsync(new HttpRequestMessage(HttpMethod.Post, new Uri(string.Format(Config.DeleteById, id))), new CancellationToken(false));
-		}
-
 		#endregion
 
 		#region Constructors
